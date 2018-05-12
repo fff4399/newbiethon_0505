@@ -1,0 +1,230 @@
+<!--
+<hr/>
+
+<h2 style="font-weight: bold">로그인 정보</h2>
+<% if user_signed_in? %>
+    <div>
+        이름 : <%= current_user.name %><br/>
+        학교 : <%= current_user.school %><br/>
+        아이디 : <%= current_user.email %><br/>
+        유저 No. : <%= current_user.id %>
+    </div>
+    
+    <!--Create Special Meeting 
+    <div class="misson-box">
+        <a href="/home/<%= current_user.name %>/meeting_sign_up" data-confirm="진짜 신청 하시겠어요?">
+            <button type="submit">신청</button>
+        </a> 
+    </div>
+    
+    
+    
+<% else %>
+    로그인 되어있지 않음.
+    
+<% end %>
+<br>
+
+<% if @returnValue == 1 %>
+<h1> 현재 만들어진 모임 ( 2단계 ) </h1>
+    <%= @j %> 조 미션 : 영화 보러 가기
+    <% @meetings.each do |meeting| %>
+        <br>
+        이름 : <%= meeting.name %>
+
+        <% @i += 1 %>
+    
+        <% if @i % 5 == 0 %>
+        <% @j += 1 %>
+        <br><br> <%= @j %> 조 미션 : 영화 보러 가기 
+        <a href="https://open.kakao.com/o/goQm85L" class="btn btn-primary">대화하러가기</a>
+        <% end %>
+        
+    <% end %>
+    
+<br><br>
+<% end %>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+       CountDownTimer('01/01/2017', 'countdown');
+       CountDownTimer('05/15/2018 00:00 AM', 'newcountdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = '마감됨!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + '일 ';
+            document.getElementById(id).innerHTML += hours + '시간 ';
+            document.getElementById(id).innerHTML += minutes + '분 ';
+            document.getElementById(id).innerHTML += seconds + '초';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+  </script>
+  
+  <style>
+  
+  button {
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007aff;
+    text-align: center;
+    display: inline-block;
+
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+    #newcountdown {
+        
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: center;
+        
+  font-size: 55pt;
+  
+  margin-bottom: 10px;
+}
+.main_wrap {
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+}
+.image1_wrap {
+}
+.image2_wrap {
+}
+.image3_wrap {
+  margin-bottom: 10px;
+}
+
+.image1_subject {
+  font-family: 'Helvetica', sans-serif;
+}
+.image2_subject {
+  font-family: 'Helvetica', sans-serif;
+}
+.image3_subject {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.image1_subject {
+  font-size: 80pt;
+}
+
+.image2_subject {
+  font-size: 20pt;
+}
+.image2_explain {
+  font-size: 30pt;
+}
+
+.image3_top {
+  font-size: 20pt;
+}s
+
+.image3_mid {
+  font-size: 80pt;
+}
+
+
+.image3_bot_left {
+  margin: 20px;
+  padding: 10px;
+  font-size: 30pt;
+  background-color: #007aff;
+  color: white;
+}
+.image3_bot_right {
+  padding: 4px;
+  font-size: 30pt;
+  background-color: #e0e0e0;
+  color: #007aff;
+}
+.btn {
+    width: 100px;
+    height: 50px;
+}
+
+.button {
+}
+  </style>
+</head>
+
+
+<body>
+    <div class="main_wrap">
+
+
+        <div class="image2_wrap">
+          <span class="image2_subject"><strong>Step 1</strong></span><br><br>
+          <div class="mission">
+          <span class="image2_explain">2018년 5월 15일, <br> <%= @activity %></span>
+          </div>
+        </div>
+
+        <div class="image3_wrap">
+            <br><br>
+          <span class="image3_top">마감까지 남은 시간</span>
+        </div>
+         <div id="newcountdown"></div>
+        <br>
+        
+          <div class="button" >
+           <span class="image3_bot_left">현재까지 <%= @meetings.count %>명 참여</span>
+           <% if @returnValue == 0 %>
+             <% if user_signed_in? %>
+            <button class="image3_bot_right" type="button" ><a href="/home/<%= current_user.name %>/<%= current_user.school %>/meeting_sign_up" data-confirm="진짜 신청 하시겠어요?">Join!</a></button>
+             <% end %>
+           <% end %>
+           
+          </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

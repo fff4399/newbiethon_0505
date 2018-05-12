@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <style>
+  
+    table {
+      text-align: center;
+    }
+    
+    tbody th {
+      text-align: center;
+    }
+    
+    thead th {
+      text-align: center;
+      background-color: #007aff;
+    }
+    
+    thead tr {
+      color: aliceblue;
+    }
+    
+    .main_wrap {
+      margin-top: 100px;
+      margin-left: 200px;
+      margin-right: 200px;
+      text-align: center;
+    }
+          
+    .image1_wrap {
+      margin-bottom: 300px;
+    }
+          
+    .image2_wrap {
+      margin-bottom: 20%;
+    }
+    
+    .image1_subject {
+      font-family: 'Helvetica', sans-serif;
+    }
+          
+    .image2_subject {
+      font-family: 'Helvetica', sans-serif;
+    }
+    
+    
+    .image1_subject {
+      font-size: 80pt;
+    }
+    
+    .image2_subject {
+      font-size: 20pt;
+    }
+          
+    .image2_explain {
+      font-size: 30pt;
+    }
+
+  </style>
+</head>
+
+<body>
+    <div class="main_wrap">
+
+        <div class="image2_wrap">
+          
+          <div class="mission">
+              <span class="image2_subject"><strong>Step 2</strong></span>
+              <br><br>
+
+              <span class="image2_explain">2018년 5월 15일,<br>친바 미션을 함께할 멤버를 확인한다. </span>
+              <br><br><br><br><br>
+          </div>
+          
+          <span class="image2_subject"><strong>Match Result</strong></span><br><br>
+        
+           
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">조</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">학교</th>
+                </tr> 
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"><a href="https://open.kakao.com/o/goQm85L">대화하기</a></th>
+                  <th scope="col"></th>
+                </tr>
+                <% @meetings.each do |meeting| %>
+                  
+                  <% if @j%5==0 && @j>0 %>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col"><a href="https://open.kakao.com/o/goQm85L">대화하기</a></th>
+                      <th scope="col"></th>
+                    </tr>
+                    
+                    <% @i += 1 %>
+                  <% end %>
+                  <% @j += 1 %>
+                  <tr>
+                    <th scope="col"><%= @i %>조</th>
+                    <th scope="col"><%= meeting.name %></th>
+                    <th scope="col"><%= meeting.school %></th>
+                  </tr>
+                <% end %>
+              </tbody>
+          </table>
+        </div>
+
+    </div>
+        
+</body>
+</html>

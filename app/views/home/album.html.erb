@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title> Hong Jong Hyun </title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+   <style>
+  
+  button {
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007aff;
+    text-align: center;
+    display: inline-block;
+
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+    #newcountdown {
+        
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: center;
+        
+  font-size: 55pt;
+  
+  margin-bottom: 10px;
+}
+.main_wrap {
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+}
+.image1_wrap {
+}
+.image2_wrap {
+}
+.image3_wrap {
+  margin-bottom: 10px;
+}
+
+.image1_subject {
+  font-family: 'Helvetica', sans-serif;
+}
+.image2_subject {
+  font-family: 'Helvetica', sans-serif;
+}
+.image3_subject {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.image1_subject {
+  font-size: 80pt;
+}
+
+.image2_subject {
+  font-size: 20pt;
+}
+.image2_explain {
+  font-size: 30pt;
+}
+
+.image3_top {
+  font-size: 20pt;
+}
+
+.image3_mid {
+  font-size: 80pt;
+}
+
+
+.image3_bot_left {
+  margin: 20px;
+  padding: 10px;
+  font-size: 30pt;
+  background-color: #007aff;
+  color: white;
+}
+.image3_bot_right {
+  padding: 4px;
+  font-size: 30pt;
+  background-color: #e0e0e0;
+  color: #007aff;
+}
+.btn {
+    width: 100px;
+    height: 50px;
+}
+
+.button {
+}
+  </style>
+</head>
+
+<body>
+  <div class="main_wrap">
+
+
+        <div class="image2_wrap">
+          <span class="image2_subject"><strong>Step 3</strong></span><br><br>
+          <div class="mission">
+          <span class="image2_explain"> 멋사 친바 모임의 지난 사진들을 확인한다. <br> <%= @activity %></span>
+          </div>
+        </div>
+  </div>
+
+  <br><br>
+
+
+
+          <!-- First Row -->
+
+          <div class="row">
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://ko.blogshotels.com/wp-content/uploads/2017/11/%E1%84%8B%E1%85%A7%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8B%E1%85%AF%E1%86%AB_04.jpg">
+                  <span class="card-title">여의도 한강공원 소풍</span>
+                </div>
+                <div class="card-content">
+                  <p>빌딩 숲 속의 오아시스, 여의도 한강공원에 소풍을 갔습니다. 이른 저녁에 들러 가볍게 치맥을 즐기기 좋은 곳!</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.co.kr/maps/place/%EC%97%AC%EC%9D%98%EB%8F%84%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90/@37.5263128,126.9313884,17z/data=!3m1!4b1!4m5!3m4!1s0x357c9f3b03c4b7ef:0xa4d8869ebf8d452c!8m2!3d37.5263086!4d126.9335824">More About</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://i.ytimg.com/vi/5u9UxOsWPkg/maxresdefault.jpg">
+                  <span class="card-title">어벤져스 인피니티 워 관람</span>
+                </div>
+                <div class="card-content">
+                  <p>영등포 cgv에서 마블의 역작 '어벤져스-인피니티 워'를 관람했습니다. <br> (XXX는 돌아온다!)</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.co.kr/maps/place/CGV+%EC%98%81%EB%93%B1%ED%8F%AC/@37.5212571,126.9051823,15z/data=!4m8!1m2!2m1!1z7JiB65Ox7Y-sIGNndg!3m4!1s0x357c9efa4fb65669:0xb3bb6958cd1cf3a4!8m2!3d37.5170117!4d126.9025061">More About</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://pbs.twimg.com/media/DRa59X9U8AAGf4q.jpg">
+                  <span class="card-title">이태원 펍에서 음악에 취하다</span>
+                </div>
+                <div class="card-content">
+                  <p> 이태원 핫플에서 수제 맥주와 함께 음악에 취해 보았습니다. </p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.google.co.kr/maps/place/%EB%B0%94%ED%86%A0%EC%8A%A4/@37.5344702,126.987997,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca24a004db017:0xe887141be8809083!8m2!3d37.534466!4d126.990191">More About</a>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+
+<br><br>
+          <!-- Second Row -->
+
+          <div class="row">
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://jmagazine.joins.com/_data/photo/2015/08/3695773658_0m1vaKqw_1.jpg">
+                  <span class="card-title">방탈출 카페에 가다</span>
+                </div>
+                <div class="card-content">
+                  <p>방탈출 카페에서 탈출에 실패했습니다. 저희를 구하러 와주세요..</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.com/maps/place/%EC%84%9C%EC%9A%B8%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84%EB%A3%B8%ED%99%8D%EB%8C%802%ED%98%B8%EC%A0%90/@37.5524411,126.9241948,731m/data=!3m1!1e3!4m8!1m2!2m1!1z7ZmN64yAIOydtOyKpOy8gOydtO2UhA!3m4!1s0x357c98c550db86e7:0x4fa43bf8b22e4971!8m2!3d37.550061!4d126.9223922?hl=ko">More About</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://ojsfile.ohmynews.com/STD_IMG_FILE/2016/0229/IE001929311_STD.JPG">
+                  <span class="card-title">노량진 수산시장</span>
+                </div>
+                <div class="card-content">
+                  <p>가을이 제철인 방어회를 맛보러 노량진 수산시장에 들렀습니다. 다행히 먹고 장염에 걸린 사람은 없었습니다.</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.com/maps/place/%EB%85%B8%EB%9F%89%EC%A7%84%EC%88%98%EC%82%B0%EC%8B%9C%EC%9E%A5/@37.5152131,126.9386737,696m/data=!3m2!1e3!4b1!4m5!3m4!1s0x357c9f682a1a3139:0xf79bdc9cd42d3b35!8m2!3d37.5152131!4d126.9408624?hl=ko">More About</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://pds25.egloos.com/pds/201504/30/96/e0063996_5540f7c5af1f4.jpg">
+                  <span class="card-title">맛집 탐방</span>
+                </div>
+                <div class="card-content">
+                  <p>미슐랭 스타를 받은 시청역 근처에 가보았습니다. 맛은 별로 없었다...</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.com/maps/place/%EC%9D%B4%EB%82%98%EB%8B%88%EC%99%80+%EC%9A%94%EC%8A%A4%EC%BC%80/@37.5653428,126.9770067,696m/data=!3m2!1e3!4b1!4m5!3m4!1s0x357ca2f26e410ec1:0x2a11efcf3ef547cf!8m2!3d37.5653428!4d126.9791954?hl=ko">More About</a>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+
+<br><br>
+          <!-- Third Row -->
+
+          <div class="row">
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://static.wixstatic.com/media/0e408e_5d9a745364244ac4a957bbdab7eb9805~mv2_d_2000_1333_s_2.jpg/v1/fill/w_630,h_420,al_c,q_80,usm_0.66_1.00_0.01/0e408e_5d9a745364244ac4a957bbdab7eb9805~mv2_d_2000_1333_s_2.webp">
+                  <span class="card-title">홍대 클럽 즐기기</span>
+                </div>
+                <div class="card-content">
+                  <p>대학생이 아니면 언제 가보겠냐는 마음으로 홍대 클럽을 탐방했습니다.</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.com/maps/place/M2/@37.5522316,126.9189839,696m/data=!3m1!1e3!4m8!1m2!2m1!1z7ZmN64yAIO2BtOufvQ!3m4!1s0x357c98dabd13eb19:0x2c5c004dc85cfd0c!8m2!3d37.551036!4d126.920614?hl=ko">More About</a>
+              </div>
+
+              </div>
+            </div>
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://s3.amazonaws.com/doindielive2/home/deploy/apps/doindie_production/releases/20150715235529/public/ckeditor_assets/pictures/1243/content_18447209_1326596660723342_6079487953626555426_n.jpg">
+                  <span class="card-title">World DJ Festival</span>
+                </div>
+                <div class="card-content">
+                  <p>매년 여름 열리는 World DJ Festival에서 신나게 방방 뛰었습니다. 다녀온 다음날에 걷기가 힘들었다.</p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.com/maps/place/%EC%98%AC%EB%A6%BC%ED%94%BD+%EC%A3%BC%EA%B2%BD%EA%B8%B0%EC%9E%A5/@37.5157882,127.0706047,696m/data=!3m2!1e3!4b1!4m5!3m4!1s0x357ca450879adccd:0x7701bd84f28c7f68!8m2!3d37.5157882!4d127.0727934?hl=ko">More About</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://cfile27.uf.tistory.com/image/2420F73C544D66990F14A6">
+                  <span class="card-title">잠실 야구장</span>
+                </div>
+                <div class="card-content">
+                  <p>가을 야구시즌을 맞아 잠실에서 두산과 롯데의 경기를 관람했습니다. 왠일로 롯데가 이겨서 좋았다. </p>
+                </div>
+
+                <div class="card-action">
+                  <a href="https://www.google.com/maps/place/%EC%98%AC%EB%A6%BC%ED%94%BD+%EC%A3%BC%EA%B2%BD%EA%B8%B0%EC%9E%A5/@37.5157882,127.0706047,696m/data=!3m2!1e3!4b1!4m5!3m4!1s0x357ca450879adccd:0x7701bd84f28c7f68!8m2!3d37.5157882!4d127.0727934?hl=ko">More About</a>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
